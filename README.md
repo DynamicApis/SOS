@@ -10,7 +10,7 @@ Version | Date | Release Notes
 ##### Version 1.0
 - Built with strongly typed languages in mind to allow for easy binding on modern user interfaces and to make serialization as simple as it should be.
 - Designed in a resource oriented fashion to help encourage resource based REST service design.
-- Designed to logically group endpoints by their aggregate root (or root resource).
+- Designed to logically group endpoints by the resource that they interact with.
 - Allows creator to indicate version.
 - Allows creator to provide general text description of overall servie as well as each resource endpoint provided.
 - Allows creator to specify list of supported media types.
@@ -236,16 +236,16 @@ A description explaining why a developer may get a specific status code returned
 An error code that may help provide specific context around a status code response received by a developer.
 
 ##### <a name="resources"></a>Resources
-A logical group of endpoints that represent or speak to the same aggregate root or root resource.
+A logical group of endpoints that represent a single resource and all endpoints that interact with said resource.
 
 ##### <a name="resources_baseUri"></a>Resoures.BaseUri
-The base uri for which all endpoints will start with.  This is the uri for the aggregate root or root resource. This should be a relative uri pointing to the aggregate root (or root resource).
+The base uri for which all endpoints will start with.  This is the relative uri for the resource that is being interacted with.
 
 ##### <a name="resources_httpMethods"></a>Resources.HttpMethods
 An array of HttpMethod objects that represent all of the endpoints for said resource.
 
 ##### <a name="resources_httpMethods_fullUri"></a>Resources.HttpMethods.FullUri
-The uri for the HttpMethod with all query string values included. This should always be relative and should start with the aggregate root (or root resource) contained on the parent [Resource](#resource).
+The uri for the HttpMethod with all query string values included. This should always be relative and should start with the same value contained on the parent [Resource](#resource).
 
 ##### <a name="resources_httpMethods_verb"></a>Resources.HttpMethods.Verb
 The http verb (or http method) that is associated to the endpoint uri for which this HttpMethod should be invoked.
