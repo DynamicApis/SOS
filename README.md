@@ -229,10 +229,10 @@ An array of status code objects that represent status code return types, a descr
 ##### <a name="httpStatusCodes_statusCode"></a>HttpStatusCode.StatusCode
 The actual http status code that a developer may expect as a result of making a request to a service represented in the SOS document.
 
-##### <a name="httpStatusCode_description"></a>HttpStatusCode.Description
+##### <a name="httpStatusCodes_description"></a>HttpStatusCode.Description
 A description explaining why a developer may get a specific status code returned.
 
-##### <a name="httpStatusCode_errorCode"></a>HttpStatusCode.ErrorCode
+##### <a name="httpStatusCodes_errorCode"></a>HttpStatusCode.ErrorCode
 An error code that may help provide specific context around a status code response received by a developer.
 
 ##### <a name="resources"></a>Resources
