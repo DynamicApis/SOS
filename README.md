@@ -169,33 +169,33 @@ Required | Field | Type | Note
 --- | --- | --- | ---
 false | [Description](#description) | string | ---
 true | [Version](#version) | string | ---
-false | [Links](#links) | Link[] | ---
+false | [Links](#links) | [Link[]](#link) | ---
 false | [Links.Description](#links_description) | string | ---
 true | [Links.Uri](#links_uri) | string | If link node exists
-false | [MediaTypeFormatters](#mediaTypeFormatters) | MediaTypeFormatter[] | ---
+false | [MediaTypeFormatters](#mediaTypeFormatters) | [MediaTypeFormatter[]](#mediaTypeFormatter) | ---
 true | [MediaTypeFormatters.SupportedMediaTypes](#mediaTypeFormatters_supportedMediaTypes) | string[] | If MediaTypeFormatters node exists
 false | [MediaTypeFormatters.Description](#mediaTypeFormatters_description) | string | ---
-false | [HttpStatusCodes](#httpStatusCodes) | HttpStatusCode[] | ---
+false | [HttpStatusCodes](#httpStatusCodes) | [HttpStatusCode[]](#httpStatusCode) | ---
 true | [HttpStatusCodes.StatusCode](#httpStatusCodes_statusCode) | int | If HttpStatusCodes node exists
 false | [HttpStatusCodes.ErrorCode](#httpStatusCodes_errorCode) | string | ---
-true | [Resources](#resources) | Resource[] | ---
+true | [Resources](#resources) | [Resource[]](#resource) | ---
 true | [Resoures.BaseUri](#resources_baseUri) | string | ---
-true | [Resources.HttpMethods](#resources_httpMethods) | HttpMethod[] | ---
+true | [Resources.HttpMethods](#resources_httpMethods) | [HttpMethod[]](#httpMethod) | ---
 true | [Resources.HttpMethods.FullUri](#resources_httpMethods_fullUri) | string | ---
 true | [Resources.HttpMethods.Verb](#resources_httpMethods_verb) | string | ---
 true | [Resources.HttpMethods.ReturnType](#resources_httpMethods_returnType) | string | ---
 false | [Resources.HttpMethods.Description](#resources_httpMethods_description) | string | ---
-false | [Resources.HttpMethods.HttpStatusCodes](#resources_httpMethods_httpStatusCodes) | HttpStatusCode[] | ---
-false | [Resources.HttpMethods.Links](#resources_httpMethods_links) | Link[] | ---
-false | [Resources.HttpMethods.Samples](#resources_httpMethods_samples) | Sample[] | ---
+false | [Resources.HttpMethods.HttpStatusCodes](#resources_httpMethods_httpStatusCodes) | [HttpStatusCode[]](#httpStatusCode) | ---
+false | [Resources.HttpMethods.Links](#resources_httpMethods_links) | [Link[]](#link) | ---
+false | [Resources.HttpMethods.Samples](#resources_httpMethods_samples) | [Sample[]](#sample) | ---
 false | [Resources.HttpMethods.Samples.Name](#resources_httpMethods_samples_name) | string | ---
-false | [Resources.HttpMethods.Parameters](#resources_httpMethods_parameters) | Parameter[] | ---
+false | [Resources.HttpMethods.Parameters](#resources_httpMethods_parameters) | [Parameter[]](#parameter) | ---
 false | [Resources.HttpMethods.Parameters.Description](#resources_httpMethods_parameters_description) | string | ---
 false | [Resources.HttpMethods.Parameters.AcceptedValues](#resources_httpMethods_parameters_acceptedValues) | string[] | ---
 true | [Resources.HttpMethods.Parameters.Name](#resources_httpMethods_parameters_name) | string | If parameter node exists
 true | [Resources.HttpMethods.Parameters.Type](#resources_httpMethods_parameters_type) | string | If parameter node exists
-true | [Resources.HttpMethods.Parameters.Usage](#resources_httpMethods_parameters_usage) | UsageType | If parameter node exists
-true | [Resources.HttpMethods.Parameters.Location](#resources_httpMethods_parameters_location) | LocationType | If parameter node exists
+true | [Resources.HttpMethods.Parameters.Usage](#resources_httpMethods_parameters_usage) | [UsageType](#resources_httpMethods_parameters_usage) | If parameter node exists
+true | [Resources.HttpMethods.Parameters.Location](#resources_httpMethods_parameters_location) | [LocationType](#resources_httpMethods_parameters_location) | If parameter node exists
 
 #### Field Descriptions
 
