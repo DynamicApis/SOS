@@ -193,7 +193,7 @@ false | [Resources.HttpMethods.Parameters](#resources_httpMethods_parameters) | 
 false | [Resources.HttpMethods.Parameters.Description](#resources_httpMethods_parameters_description) | string | ---
 false | [Resources.HttpMethods.Parameters.AcceptedValues](#resources_httpMethods_parameters_acceptedValues) | string[] | ---
 true | [Resources.HttpMethods.Parameters.Name](#resources_httpMethods_parameters_name) | string | If parameter node exists
-true | [Resources.HttpMethods.Parameters.Type](#resources_httpMethods_parameters_type) | ParameterType | If parameter node exists
+true | [Resources.HttpMethods.Parameters.Type](#resources_httpMethods_parameters_type) | string | If parameter node exists
 true | [Resources.HttpMethods.Parameters.Usage](#resources_httpMethods_parameters_usage) | UsageType | If parameter node exists
 true | [Resources.HttpMethods.Parameters.Location](#resources_httpMethods_parameters_location) | LocationType | If parameter node exists
 
@@ -334,3 +334,74 @@ A description to provide the developer with more context as to what the paramete
 
 ##### <a name="resources_httpMethods_parameters_acceptedValues"></a>Resources.HttpMethods.Parameters.AcceptedValues
 An array of strings indicating to the developer that there is a finite number of acceptable inputs for the target parameter. This is very useful for enum types.
+
+#### Field Examples
+
+##### <a name="link"></a>Link
+```js
+{
+   "Uri": "http://www.DynamicApis.com/",
+   "Description": "Best site in the world for service documentation."
+}
+```
+
+##### <a name="mediaTypeFormatter"></a>MediaTypeFormatter
+```js
+{
+   "Description": "JSON media type formatter",
+   "SupportedMediaTypes": [
+      "application/json",
+      "text/json"
+   ]
+}
+```
+
+##### <a name="httpStatusCode"></a>HttpStatusCode
+```js
+{
+   "StatusCode": 401,
+   "Description": "Returned if oAuth 2 bearer token is not valid.",
+   "ErrorCode": "1xx93-401"
+}
+```
+
+##### <a name="resource"></a>Resource
+Also See [HttpMethod](#resources_httpMethods)
+```js
+{
+   "BaseUri": "/products/{id}",
+   "HttpMethods": [
+      [...]
+   ]
+}
+```
+
+##### <a name="sample"></a>Sample
+```js
+{
+   "Source": "Header",
+   "Format": "String",
+   "Type": "PlainText",
+   "Direction": "Request",
+   "Value": "bearer <Your Token Here>",
+   "Name": "authorization"
+}
+```
+
+##### <a name="parameter"></a>Parameter
+Also see [Usage](#resources_httpMethods_parameters_usage)
+
+Also see [Location](#resources_httpMethods_parameters_location)
+
+```js
+{
+   "Name": "unitOfMeasure",
+   "Type": "string",
+   "Description": "The unit of measure for which the request should be executed in.",
+   "Usage": "Required",
+   "Location": "Querystring",
+   "AcceptedValues": [
+      "cm", "in", "ft", "km", "mi"
+   ]
+}
+```
