@@ -239,13 +239,13 @@ An error code that may help provide specific context around a status code respon
 A logical group of endpoints that represent or speak to the same aggregate root or root resource.
 
 ##### <a name="resources_baseUri"></a>Resoures.BaseUri
-The base uri for which all endpoints will start with.  This is the uri for the aggregate root or root resource. This may be relative or absolute.
+The base uri for which all endpoints will start with.  This is the uri for the aggregate root or root resource. This should be a relative uri pointing to the aggregate root (or root resource).
 
 ##### <a name="resources_httpMethods"></a>Resources.HttpMethods
 An array of HttpMethod objects that represent all of the endpoints for said resource.
 
 ##### <a name="resources_httpMethods_fullUri"></a>Resources.HttpMethods.FullUri
-The uri for the HttpMethod with all query string values included. This may be absolute or relative. If this is relative then it should be relative to Resources.BaseUri.
+The uri for the HttpMethod with all query string values included. This should always be relative and should start with the aggregate root (or root resource) contained on the parent [Resource](#resource).
 
 ##### <a name="resources_httpMethods_verb"></a>Resources.HttpMethods.Verb
 The http verb (or http method) that is associated to the endpoint uri for which this HttpMethod should be invoked.
