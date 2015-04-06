@@ -366,7 +366,7 @@ An array of strings indicating to the developer that there is a finite number of
 ```
 
 ##### <a name="resource"></a>Resource
-Also See [HttpMethod](#resources_httpMethods)
+Also See [HttpMethod](#httpMethod)
 ```js
 {
    "BaseUri": "/products/{id}",
@@ -411,7 +411,7 @@ Also see [Links](#link)
 
 Also see [Parameters](#parameter)
 
-Also see [HttpStatusCodes](#httpStatusCode]
+Also see [HttpStatusCodes](#httpStatusCode)
 
 Also see [Samples](#sample)
 
