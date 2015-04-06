@@ -253,19 +253,19 @@ The http verb (or http method) that is associated to the endpoint uri for which 
 ##### <a name="resources_httpMethods_returnType"></a>Resources.HttpMethods.ReturnType
 The return type that a developer can expect as a result of successfully executing a request against said HttpMethod.
 
-##### <a name="resource_httpMethods_description"></a>Resources.HttpMethods.Description
+##### <a name="resources_httpMethods_description"></a>Resources.HttpMethods.Description
 A description of what the respective endpoint does upon being invoked.
 
-##### <a name="resource_httpMethods_httpStatusCodes"></a>Resources.HttpMethods.HttpStatusCodes
+##### <a name="resources_httpMethods_httpStatusCodes"></a>Resources.HttpMethods.HttpStatusCodes
 An array of status code objects that represent status code return types, a description of why a developer might recieve that type, and an error code (if one exists) for said response.
 
-##### <a name="resource_httpMethods_links"></a>Resources.HttpMethods.Links
+##### <a name="resources_httpMethods_links"></a>Resources.HttpMethods.Links
 A list of links that a developer can use to gain more context or more information outside the scope of what is discussed in the SOS document.
 
-##### <a name="resource_httpMethods_samples"></a>Resources.HttpMethods.Samples
+##### <a name="resources_httpMethods_samples"></a>Resources.HttpMethods.Samples
 An array of sample objects that give the developer example or sample data about input parameters for the respective HttpMethod. This can contain anythng from a JSON object to something like a callback uri for more data.
 
-##### <a name="resource_httpMethods_samples_source"></a>Resources.HttpMethods.Samples.Source
+##### <a name="resources_httpMethods_samples_source"></a>Resources.HttpMethods.Samples.Source
 The soure for which the sample is attempting to provide context to. Supported types include:
 - Body: Tell the developer that the sample they are looking at is in the post body.
 - Header: Tell the developer that the sample they are looking at is in a header.
@@ -274,7 +274,7 @@ The soure for which the sample is attempting to provide context to. Supported ty
 
 This value can be extended to include other source types if you wish.
 
-##### <a name="resource_httpMethods_samples_format"></a>Resources.HttpMethods.Samples.Format
+##### <a name="resources_httpMethods_samples_format"></a>Resources.HttpMethods.Samples.Format
 The format for which the sample is attempting to provide context to. Supported types include:
 - String: Tell the developer that the sample they are looking at is a string value with no known format.
 - Json: Tell the developer that the sample they are looking at is a valid json object string.
@@ -283,34 +283,34 @@ The format for which the sample is attempting to provide context to. Supported t
 
 This value can be extended to include other format types if you wish.
 
-##### <a name="resource_httpMethods_samples_type"></a>Resources.HttpMethods.Samples.Type
+##### <a name="resources_httpMethods_samples_type"></a>Resources.HttpMethods.Samples.Type
 The actual type of sample that you are providing the developer. Supported types include:
 - CallbackUri: Tell the developer that the sample they are looking at is going to be a callback uri which has to be executed to get sample value.
 - PlainText: Tell the developer that the sample they are looking at is an actual sample in plain text.
 
 This value can be extended to include other types if you wish.
 
-##### <a name="resource_httpMethods_samples_direction"></a>Resources.HttpMethods.Samples.Direction
+##### <a name="resources_httpMethods_samples_direction"></a>Resources.HttpMethods.Samples.Direction
 The direction for which the sample is attempting to represent. Supported types include:
 - Request: Tell the developer that the sample they are looking at is with respect to the request.
 - Response: Tell the developer that the sample they are looking at is with respect to the response.
 
-##### <a name="resource_httpMethods_samples_value"></a>Resources.HttpMethods.Samples.Value
+##### <a name="resources_httpMethods_samples_value"></a>Resources.HttpMethods.Samples.Value
 The actual value for the sample. This can vary based on the type of sample attempting to provide information for.
 
-##### <a name="resource_httpMethods_samples_name"></a>Resources.HttpMethods.Samples.Name
+##### <a name="resources_httpMethods_samples_name"></a>Resources.HttpMethods.Samples.Name
 The name, if applicable, for the parameter that the sample is attempting to provide information for.
 
-##### <a name="resource_httpMethods_parameters"></a>Resources.HttpMethods.Parameters
+##### <a name="resources_httpMethods_parameters"></a>Resources.HttpMethods.Parameters
 Input paramters for the respective HttpMethod that the developer can expect. 
 
-##### <a name="resource_httpMethods_parameters_name"></a>Resources.HttpMethods.Parameters.Name
+##### <a name="resources_httpMethods_parameters_name"></a>Resources.HttpMethods.Parameters.Name
 The name of the parameter to help give context to the input parameter being described.
 
-##### <a name="resource_httpMethods_parameters_type"></a>Resources.HttpMethods.Parameters.Type
+##### <a name="resources_httpMethods_parameters_type"></a>Resources.HttpMethods.Parameters.Type
 The type of the parameter being described.
 
-##### <a name="resource_httpMethods_parameters_usage"></a>Resources.HttpMethods.Parameters.Usage
+##### <a name="resources_httpMethods_parameters_usage"></a>Resources.HttpMethods.Parameters.Usage
 A type that tells the developer if the parameter is required, optional, conditional, or outboundonly. Supported types include:
 - Optional: Tell the developer that the target parameter is optional.
 - Required: Tell the developer that the target parameter is required.
@@ -319,7 +319,7 @@ A type that tells the developer if the parameter is required, optional, conditio
 
 This value can be extended to include other types if you wish.
 
-##### <a name="resource_httpMethods_parameters_location"></a>Resources.HttpMethods.Parameters.Location
+##### <a name="resources_httpMethods_parameters_location"></a>Resources.HttpMethods.Parameters.Location
 A type that tells the developer where they can expect to insert the parameter. Supported types include:
 - Header: Tell the developer that the target parameter is located in the header.
 - BaseUri: Tell the developer that the target parameter is located in the base uri (not the query string).
@@ -329,8 +329,8 @@ A type that tells the developer where they can expect to insert the parameter. S
 
 This value can be extended to include other types if you wish.
 
-##### <a name="resource_httpMethods_parameters_description"></a>Resources.HttpMethods.Parameters.Description
+##### <a name="resources_httpMethods_parameters_description"></a>Resources.HttpMethods.Parameters.Description
 A description to provide the developer with more context as to what the parameter represents and what its function is.
 
-##### <a name="resource_httpMethods_parameters_acceptedValues"></a>Resources.HttpMethods.Parameters.AcceptedValues
+##### <a name="resources_httpMethods_parameters_acceptedValues"></a>Resources.HttpMethods.Parameters.AcceptedValues
 An array of strings indicating to the developer that there is a finite number of acceptable inputs for the target parameter. This is very useful for enum types.
