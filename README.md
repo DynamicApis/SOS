@@ -28,11 +28,11 @@ The goal of SOS is much more than simply creating a json document to power a sin
 Documentation should be very easy for a developer to read and quickly make sense of in its raw format. It should also be flexible and simple enough to be easily leveraged by ANY modern user interface.
 
 ## References
-[Http Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+[Http Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes) - A list of http status codes from wikipedia.
 
-[Http Media Types](http://en.wikipedia.org/wiki/Internet_media_type)
+[Http Media Types](http://en.wikipedia.org/wiki/Internet_media_type) - A little bit about media types and what they are from wikipedia.
 
-[Http Verbs](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
+[Http Verbs](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) - A list of http verbs (methods) and what they are used for from wikipedia.
 
 ## Specification
 ### Sample
