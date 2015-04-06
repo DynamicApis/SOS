@@ -167,35 +167,35 @@ Documentation should be very easy for a developer to read and quickly make sense
 ### Fields
 Required | Field | Type | Note
 --- | --- | --- | ---
-false | Description | string | ---
-true | Version | string | ---
-false | Links | Link[] | ---
-false | Links.Description | string | ---
-true | Links.Uri | string | If link node exists
-false | MediaTypeFormatters | MediaTypeFormatter[] | ---
-true | MediaTypeFormatters.SupportedMediaTypes | string[] | If MediaTypeFormatters node exists
-false | MediaTypeFormatters.Description | string | ---
-false | HttpStatusCodes | HttpStatusCode[] | ---
-true | HttpStatusCodes.StatusCode | int | If HttpStatusCodes node exists
-false | HttpStatusCodes.ErrorCode | string | ---
-true | Resources | Resource[] | ---
-true | Resoures.BaseUri | string | ---
-true | Resources.HttpMethods | HttpMethod[] | ---
-true | Resources.HttpMethods.FullUri | string | ---
-true | Resources.HttpMethods.Verb | string | ---
-true | Resources.HttpMethods.ReturnType | string | ---
-false | Resources.HttpMethods.Description | string | ---
-false | Resources.HttpMethods.HttpStatusCodes | HttpStatusCode[] | ---
-false | Resources.HttpMethods.Links | Link[] | ---
-false | Resources.HttpMethods.Samples | Sample[] | ---
-false | Resources.HttpMethods.Samples.Name | string | ---
-false | Resources.HttpMethods.Parameters | Parameter[] | ---
-false | Resources.HttpMethods.Parameters.Description | string | ---
-false | Resources.HttpMethods.Parameters.AcceptedValues | string[] | ---
-true | Resources.HttpMethods.Parameters.Name | string | If parameter node exists
-true | Resources.HttpMethods.Parameters.Type | ParameterType | If parameter node exists
-true | Resources.HttpMethods.Parameters.Usage | UsageType | If parameter node exists
-true | Resources.HttpMethods.Parameters.Location | LocationType | If parameter node exists
+false | [Description](#description) | string | ---
+true | [Version](#version) | string | ---
+false | [Links](#links) | Link[] | ---
+false | [Links.Description](#links_description) | string | ---
+true | [Links.Uri](#links_uri) | string | If link node exists
+false | [MediaTypeFormatters](#mediaTypeFormatters) | MediaTypeFormatter[] | ---
+true | [MediaTypeFormatters.SupportedMediaTypes](#mediaTypeFormatters_supportedMediaTypes) | string[] | If MediaTypeFormatters node exists
+false | [MediaTypeFormatters.Description](#mediaTypeFormatters_description) | string | ---
+false | [HttpStatusCodes](#httpStatusCodes) | HttpStatusCode[] | ---
+true | [HttpStatusCodes.StatusCode](#httpStatusCodes_statusCode) | int | If HttpStatusCodes node exists
+false | [HttpStatusCodes.ErrorCode](#httpStatusCodes_errorCode) | string | ---
+true | [Resources](#resources) | Resource[] | ---
+true | [Resoures.BaseUri](#resources_baseUri) | string | ---
+true | [Resources.HttpMethods](#resources_httpMethods) | HttpMethod[] | ---
+true | [Resources.HttpMethods.FullUri](#resources_httpMethods_fullUri) | string | ---
+true | [Resources.HttpMethods.Verb](#resources_httpMethods_verb) | string | ---
+true | [Resources.HttpMethods.ReturnType](#resources_httpMethods_returnType) | string | ---
+false | [Resources.HttpMethods.Description](#resources_httpMethods_description) | string | ---
+false | [Resources.HttpMethods.HttpStatusCodes](#resources_httpMethods_httpStatusCodes) | HttpStatusCode[] | ---
+false | [Resources.HttpMethods.Links](#resources_httpMethods_links) | Link[] | ---
+false | [Resources.HttpMethods.Samples](#resources_httpMethods_samples) | Sample[] | ---
+false | [Resources.HttpMethods.Samples.Name](#resources_httpMethods_samples_name) | string | ---
+false | [Resources.HttpMethods.Parameters](#resources_httpMethods_parameters) | Parameter[] | ---
+false | [Resources.HttpMethods.Parameters.Description](#resources_httpMethods_parameters_description) | string | ---
+false | [Resources.HttpMethods.Parameters.AcceptedValues](#resources_httpMethods_parameters_acceptedValues) | string[] | ---
+true | [Resources.HttpMethods.Parameters.Name](#resources_httpMethods_parameters_name) | string | If parameter node exists
+true | [Resources.HttpMethods.Parameters.Type](#resources_httpMethods_parameters_type) | ParameterType | If parameter node exists
+true | [Resources.HttpMethods.Parameters.Usage](#resources_httpMethods_parameters_usage) | UsageType | If parameter node exists
+true | [Resources.HttpMethods.Parameters.Location](#resources_httpMethods_parameters_location) | LocationType | If parameter node exists
 
 #### Field Descriptions
 
