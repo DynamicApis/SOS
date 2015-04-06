@@ -22,7 +22,7 @@ Version | Date | Release Notes
 
 ## Introduction
 
-Provide easy to read and understand REST service documentation format.
+On a mission to provide easy to read and easy to understand REST service documentation format.
 
 The goal of SOS is much more than simply creating a json document to power a single user interface designed by the SOS creators. It is the belief of the founders of DynamicApis.com that service documentation format should be simple and powerful. 
 Documentation should be very easy for a developer to read and quickly make sense of in its raw format. It should also be flexible and simple enough to be easily leveraged by ANY modern user interface.
