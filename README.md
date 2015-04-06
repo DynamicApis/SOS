@@ -405,3 +405,33 @@ Also see [Location](#resources_httpMethods_parameters_location)
    ]
 }
 ```
+
+##### <a name="httpMethod"></a>HttpMethod
+Also see [Links](#link)
+
+Also see [Parameters](#parameter)
+
+Also see [HttpStatusCodes](#httpStatusCode]
+
+Also see [Samples](#sample)
+
+```js
+{
+   "Verb": "GET",
+   "Description": "Return a product for a given product id.",
+   "FullUri": "/products/{id}",
+   "ReturnType": "Product",
+   "Links": [
+      [...]
+   ],
+   "Parameters": [
+      [...]
+   ],
+   "HttpStatusCodes": [
+      [...]
+   ],
+   "Samples": [
+      [...]
+   ]
+}
+```
