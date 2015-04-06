@@ -165,108 +165,107 @@ Documentation should be very easy for a developer to read and quickly make sense
 ```
 
 ### Fields
-#### Required
-- Version
-- MediaTypeFormatters
-- MediaTypeFormatters.SupportedMediaTypes
-- Resources
-- Resoures.BaseUri
-- Resources.HttpMethods
-- Resources.HttpMethods.FullUri
-- Resources.HttpMethods.Verb
-- Resources.HttpMethods.ReturnType
-- Resources.HttpMethods.Parameters.Name
-- Resources.HttpMethods.Parameters.Type
-- Resources.HttpMethods.Parameters.Usage
-- Resources.HttpMethods.Parameters.Location
-
-- If a Link is specified then a valid absolute URL should exist for Link.Uri.
-- If an HttpStatusCode is specified then a valid status code should exist for HttpStatusCode.Code
-- If a Resources.HttpMethods.Sample is specified then the following are required for that object: Source, Format, Type, Direction, Value 
-
-#### Optional (but recommended)
-- Description
-- Links
-- HttpStatusCodes
-- MediaTypeFormatters.Description
-- Resources.HttpMethods.Description
-- Resources.HttpMethods.HttpStatusCodes
-- Resources.HttpMethods.Links
-- Resources.HttpMethods.Samples
-- Resources.HttpMethods.Samples.Name
-- Resources.HttpMethods.Parameters
-- Resources.HttpMethods.Parameters.Description
-- Resources.HttpMethods.Parameters.AcceptedValues
+Required | Field | Type | Note
+--- | --- | --- | ---
+false | Description | string | ---
+true | Version | string | ---
+false | Links | Link[] | ---
+false | Links.Description | string | ---
+true | Links.Uri | string | If link node exists
+false | MediaTypeFormatters | MediaTypeFormatter[] | ---
+true | MediaTypeFormatters.SupportedMediaTypes | string[] | If MediaTypeFormatters node exists
+false | MediaTypeFormatters.Description | string | ---
+false | HttpStatusCodes | HttpStatusCode[] | ---
+true | HttpStatusCodes.StatusCode | int | If HttpStatusCodes node exists
+false | HttpStatusCodes.ErrorCode | string | ---
+true | Resources | Resource[] | ---
+true | Resoures.BaseUri | string | ---
+true | Resources.HttpMethods | HttpMethod[] | ---
+true | Resources.HttpMethods.FullUri | string | ---
+true | Resources.HttpMethods.Verb | string | ---
+true | Resources.HttpMethods.ReturnType | string | ---
+false | Resources.HttpMethods.Description | string | ---
+false | Resources.HttpMethods.HttpStatusCodes | HttpStatusCode[] | ---
+false | Resources.HttpMethods.Links | Link[] | ---
+false | Resources.HttpMethods.Samples | Sample[] | ---
+false | Resources.HttpMethods.Samples.Name | string | ---
+false | Resources.HttpMethods.Parameters | Parameter[] | ---
+false | Resources.HttpMethods.Parameters.Description | string | ---
+false | Resources.HttpMethods.Parameters.AcceptedValues | string[] | ---
+true | Resources.HttpMethods.Parameters.Name | string | If parameter node exists
+true | Resources.HttpMethods.Parameters.Type | ParameterType | If parameter node exists
+true | Resources.HttpMethods.Parameters.Usage | UsageType | If parameter node exists
+true | Resources.HttpMethods.Parameters.Location | LocationType | If parameter node exists
 
 #### Field Descriptions
 
-##### Version : string
+##### Version
 A string representation of the version for the services represented in the SOS document.
 
-##### MediaTypeFormatters : MediaTypeFormatter[]
+##### MediaTypeFormatters
 An array of media type formatters that are supported by the services represented in the SOS document.
 
-##### MediaTypeFormatters.Description : string
+##### MediaTypeFormatters.Description
 A description explaining what media type is being supported.
 
-##### MediaTypeFormatters.SupportedMediaTypes : string[]
+##### MediaTypeFormatters.SupportedMediaTypes
 An array of strings whos value are the media types (MIME types) that are supported by the services represented in the SOS document.
 
-##### Description : string
+##### Description
 A desription explaining, in a global way, what the function of the services do for services represnted in the SOS document.
 
-##### Links : Link[]
+##### Links
 A list of links that a developer can use to gain more context or more information outside the scope of what is discussed in the SOS document.
 
-##### Links.Description : string
+##### Links.Description
 A description for the link explaining what the link is for.
 
-##### Links.Uri : string
+##### Links.Uri
 The actual uri for which the link will resolve.
 
-##### HttpStatusCodes : HttpStatusCode[]
+##### HttpStatusCodes
 An array of status code objects that represent status code return types, a description of why a developer might recieve that type, and an error code (if one exists) for said response.
 
-##### HttpStatusCode.StatusCode : integer
+##### HttpStatusCode.StatusCode
 The actual http status code that a developer may expect as a result of making a request to a service represented in the SOS document.
 
-##### HttpStatusCode.Description : string
+##### HttpStatusCode.Description
 A description explaining why a developer may get a specific status code returned.
 
-##### HttpStatusCode.ErrorCode : string
+##### HttpStatusCode.ErrorCode
 An error code that may help provide specific context around a status code response received by a developer.
 
-##### Resources : Resource[]
+##### Resources
 A logical group of endpoints that represent or speak to the same aggregate root or root resource.
 
-##### Resoures.BaseUri : string
+##### Resoures.BaseUri
 The base uri for which all endpoints will start with.  This is the uri for the aggregate root or root resource. This may be relative or absolute.
 
-##### Resources.HttpMethods : HttpMethod[]
+##### Resources.HttpMethods
 An array of HttpMethod objects that represent all of the endpoints for said resource.
 
-##### Resources.HttpMethods.FullUri : string
+##### Resources.HttpMethods.FullUri
 The uri for the HttpMethod with all query string values included. This may be absolute or relative. If this is relative then it should be relative to Resources.BaseUri.
 
-##### Resources.HttpMethods.Verb : string
+##### Resources.HttpMethods.Verb
 The http verb (or http method) that is associated to the endpoint uri for which this HttpMethod should be invoked.
 
-##### Resources.HttpMethods.ReturnType : string
+##### Resources.HttpMethods.ReturnType
 The return type that a developer can expect as a result of successfully executing a request against said HttpMethod.
 
-##### Resources.HttpMethods.Description : string
+##### Resources.HttpMethods.Description
 A description of what the respective endpoint does upon being invoked.
 
-##### Resources.HttpMethods.HttpStatusCodes : HttpStatusCode[]
+##### Resources.HttpMethods.HttpStatusCodes
 An array of status code objects that represent status code return types, a description of why a developer might recieve that type, and an error code (if one exists) for said response.
 
 ##### Resources.HttpMethods.Links
 A list of links that a developer can use to gain more context or more information outside the scope of what is discussed in the SOS document.
 
-##### Resources.HttpMethods.Samples : Sample[]
+##### Resources.HttpMethods.Samples
 An array of sample objects that give the developer example or sample data about input parameters for the respective HttpMethod. This can contain anythng from a JSON object to something like a callback uri for more data.
 
-##### Resources.HttpMethods.Samples.Source : string
+##### Resources.HttpMethods.Samples.Source
 The soure for which the sample is attempting to provide context to. Supported types include:
 - Body: Tell the developer that the sample they are looking at is in the post body.
 - Header: Tell the developer that the sample they are looking at is in a header.
@@ -275,7 +274,7 @@ The soure for which the sample is attempting to provide context to. Supported ty
 
 This value can be extended to include other source types if you wish.
 
-##### Resources.HttpMethods.Samples.Format : string
+##### Resources.HttpMethods.Samples.Format
 The format for which the sample is attempting to provide context to. Supported types include:
 - String: Tell the developer that the sample they are looking at is a string value with no known format.
 - Json: Tell the developer that the sample they are looking at is a valid json object string.
@@ -284,34 +283,34 @@ The format for which the sample is attempting to provide context to. Supported t
 
 This value can be extended to include other format types if you wish.
 
-##### Resources.HttpMethods.Samples.Type : string
+##### Resources.HttpMethods.Samples.Type
 The actual type of sample that you are providing the developer. Supported types include:
 - CallbackUri: Tell the developer that the sample they are looking at is going to be a callback uri which has to be executed to get sample value.
 - PlainText: Tell the developer that the sample they are looking at is an actual sample in plain text.
 
 This value can be extended to include other types if you wish.
 
-##### Resources.HttpMethods.Samples.Direction : string
+##### Resources.HttpMethods.Samples.Direction
 The direction for which the sample is attempting to represent. Supported types include:
 - Request: Tell the developer that the sample they are looking at is with respect to the request.
 - Response: Tell the developer that the sample they are looking at is with respect to the response.
 
-##### Resources.HttpMethods.Samples.Value : string
+##### Resources.HttpMethods.Samples.Value
 The actual value for the sample. This can vary based on the type of sample attempting to provide information for.
 
-##### Resources.HttpMethods.Samples.Name : string
+##### Resources.HttpMethods.Samples.Name
 The name, if applicable, for the parameter that the sample is attempting to provide information for.
 
-##### Resources.HttpMethods.Parameters : Parameter[]
+##### Resources.HttpMethods.Parameters
 Input paramters for the respective HttpMethod that the developer can expect. 
 
-##### Resources.HttpMethods.Parameters.Name : string
+##### Resources.HttpMethods.Parameters.Name
 The name of the parameter to help give context to the input parameter being described.
 
-##### Resources.HttpMethods.Parameters.Type : string
+##### Resources.HttpMethods.Parameters.Type
 The type of the parameter being described.
 
-##### Resources.HttpMethods.Parameters.Usage : string
+##### Resources.HttpMethods.Parameters.Usage
 A type that tells the developer if the parameter is required, optional, conditional, or outboundonly. Supported types include:
 - Optional: Tell the developer that the target parameter is optional.
 - Required: Tell the developer that the target parameter is required.
@@ -320,7 +319,7 @@ A type that tells the developer if the parameter is required, optional, conditio
 
 This value can be extended to include other types if you wish.
 
-##### Resources.HttpMethods.Parameters.Location : string
+##### Resources.HttpMethods.Parameters.Location
 A type that tells the developer where they can expect to insert the parameter. Supported types include:
 - Header: Tell the developer that the target parameter is located in the header.
 - BaseUri: Tell the developer that the target parameter is located in the base uri (not the query string).
@@ -330,8 +329,8 @@ A type that tells the developer where they can expect to insert the parameter. S
 
 This value can be extended to include other types if you wish.
 
-##### Resources.HttpMethods.Parameters.Description : string
+##### Resources.HttpMethods.Parameters.Description
 A description to provide the developer with more context as to what the parameter represents and what its function is.
 
-##### Resources.HttpMethods.Parameters.AcceptedValues : string[]
+##### Resources.HttpMethods.Parameters.AcceptedValues
 An array of strings indicating to the developer that there is a finite number of acceptable inputs for the target parameter. This is very useful for enum types.
