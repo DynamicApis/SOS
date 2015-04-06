@@ -187,7 +187,7 @@ true | [Resources.HttpMethods.ReturnType](#resources_httpMethods_returnType) | s
 false | [Resources.HttpMethods.Description](#resources_httpMethods_description) | string | ---
 false | [Resources.HttpMethods.HttpStatusCodes](#resources_httpMethods_httpStatusCodes) | [HttpStatusCode[]](#httpStatusCode) | ---
 false | [Resources.HttpMethods.Links](#resources_httpMethods_links) | [Link[]](#link) | ---
-false | [Resources.HttpMethods.Samples](#resources_httpMethods_samples) | [Sample[]](#sample) | ---
+false | [Resources.HttpMethods.Samples](#resources_httpMethods_samples) | [Sample[]](#_sample) | ---
 false | [Resources.HttpMethods.Samples.Name](#resources_httpMethods_samples_name) | string | ---
 false | [Resources.HttpMethods.Parameters](#resources_httpMethods_parameters) | [Parameter[]](#parameter) | ---
 false | [Resources.HttpMethods.Parameters.Description](#resources_httpMethods_parameters_description) | string | ---
@@ -376,7 +376,7 @@ Also See [HttpMethod](#httpMethod)
 }
 ```
 
-##### <a name="sample"></a>Sample
+##### <a name="_sample"></a>Sample
 ```js
 {
    "Source": "Header",
@@ -413,7 +413,7 @@ Also see [Parameters](#parameter)
 
 Also see [HttpStatusCodes](#httpStatusCode)
 
-Also see [Samples](#sample)
+Also see [Samples](#_sample)
 
 ```js
 {
