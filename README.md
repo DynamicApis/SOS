@@ -38,6 +38,7 @@ Documentation should be very easy for a developer to read and quickly make sense
 ### Sample
 ```js
 {
+   "HostUri": "https://api.DynamicApis.com",
    "Description":"Use this service to interact with product information.",
    "Version":"v1",
    "MediaTypeFormatters":[
@@ -169,6 +170,7 @@ Required | Field | Type | Note
 --- | --- | --- | ---
 false | [Description](#description) | string | ---
 true | [Version](#version) | string | ---
+true | [HostUri](#hostUri) | string | ---
 false | [Links](#links) | [Link[]](#link) | ---
 false | [Links.Description](#links_description) | string | ---
 true | [Links.Uri](#links_uri) | string | If link node exists
@@ -213,6 +215,9 @@ An array of strings whos value are the media types (MIME types) that are support
 
 ##### <a name="description"></a>Description
 A desription explaining, in a global way, what the function of the services do for services represnted in the SOS document.
+
+##### <a name="hostUri"></a>HostUri
+The absolute uri for which all of the endpoints are in the document refer to.  All relative uris in the document will be relative to this uri. 
 
 ##### <a name="links"></a>Links
 A list of links that a developer can use to gain more context or more information outside the scope of what is discussed in the SOS document.
