@@ -5,7 +5,7 @@ An open standard format for providing consistent easy to use and undersatnd REST
 
 Version | Date | Release Notes
 --- | --- | ---
-1.0 | 05/02/2015 | Initial release of version 1.0
+1.0 | 04/01/2015 | Initial release of version 1.0
 
 ##### Version 1.0
 - Built with strongly typed languages in mind to allow for easy binding on modern user interfaces and to make serialization as simple as it should be.
