@@ -35,6 +35,9 @@ Documentation should be very easy for a developer to read and quickly make sense
 [Http Verbs](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) - A list of http verbs (methods) and what they are used for from wikipedia.
 
 ## Specification
+### Suggestions
+It is suggested, but not mandatory, that a seperate SOS document be created for each aggregate root in your domain.  For example if you have endpoints that represent a product (/products) then all endpoints that start with /products should go into a single document.
+
 ### Sample
 ```js
 {
